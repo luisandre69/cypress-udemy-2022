@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/luisandre69/cypress-udemy-2022#readme",
   "dependencies": {
-    "cypress": "^10.4.0"
+    "cypress": "^10.4.0",
+    "prettier": "^2.7.1"
   }
 }
