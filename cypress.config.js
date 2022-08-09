@@ -1,18 +1,19 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-  // These settings apply everywhere unless overridden
-  defaultCommandTimeout: 5000,
-  viewportWidth: 1000,
-  viewportHeight: 600,
-  // Viewport settings overridden for component tests
-  component: {
-    viewportWidth: 500,
-    viewportHeight: 500
-  },
-  // Command timeout overridden for E2E tests
-  e2e: {
-    defaultCommandTimeout: 10000,
-    specPattern: "**/*.cy.js"
-  }
-})
+	// Command timeout overridden for E2E tests
+	e2e: {
+		specPattern: '**/*.cy.js',
+		baseUrl: 'http://zero.webappsecurity.com',
+		viewportHeight: 1000,
+		viewportHeight: 600,
+		animationDistanceThreshold: 20,
+		defaultCommandTimeout: 5000,
+		execTimeout: 60000,
+		pageLoadTimeout: 60000,
+		requestTimeout: 15000,
+		responseTimeout: 15000,
+		video: false,
+		failOnStatusCode: false,
+	},
+});
