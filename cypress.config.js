@@ -3,8 +3,7 @@ const { defineConfig } = require('cypress');
 module.exports = defineConfig({
 	reporter: 'cypress-mochawesome-reporter',
 	e2e: {
-		// specPattern: '**/*.cy.js',
-		specPattern: '**/*.cy.ts',
+		specPattern: '**/*.cy.*s',
 		baseUrl: 'http://zero.webappsecurity.com',
 		viewportHeight: 1000,
 		viewportHeight: 600,
