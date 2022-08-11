@@ -1,9 +1,10 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-	// Command timeout overridden for E2E tests
+	reporter: 'cypress-mochawesome-reporter',
 	e2e: {
-		specPattern: '**/*.cy.js',
+		// specPattern: '**/*.cy.js',
+		specPattern: '**/*.cy.ts',
 		baseUrl: 'http://zero.webappsecurity.com',
 		viewportHeight: 1000,
 		viewportHeight: 600,
@@ -15,5 +16,10 @@ module.exports = defineConfig({
 		responseTimeout: 15000,
 		video: false,
 		failOnStatusCode: false,
+		reportDir: 'cypress/reports',
+		// Command timeout overridden for E2E tests
+		setupNodeEvents(on, config) {
+			require('cypress-mochawesome-reporter/plugin')(on);
+		},
 	},
 });
