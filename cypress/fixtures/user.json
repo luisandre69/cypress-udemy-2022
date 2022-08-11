@@ -1,4 +1,5 @@
 {
     "username": "testUser",
-    "password": "password"
+    "password": "password",
+    "id": "username"
 }

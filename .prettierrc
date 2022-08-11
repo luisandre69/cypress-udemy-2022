@@ -4,5 +4,6 @@
     "useTabs": true,
     "tabWidth": 2,
     "bracketSpacing": true,
-    "arrowParens": "avoid"
+    "arrowParens": "avoid",
+    "trainlingComma": "es5"
 }
